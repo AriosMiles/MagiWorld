@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class CharType {
 
-    Char valueStats;   // J'ai chang� ici : Je d�finit simplement valueStats
+    Char valueStats;
 
     /** Create a new Character
      *
@@ -17,7 +17,7 @@ class CharType {
 
         if (val==1) {
             System.out.println("Vous avez choisis Guerrier!");
-            return valueStats= new Guerrier();} // Ensuite je donne a valueStats la classe d�sir�e : avant tu la cr�ait dans le vide
+            return valueStats= new Guerrier();}
 
         else if (val==2){
             System.out.println("Vous avez choisis Mage!");
@@ -69,7 +69,7 @@ class CharType {
 
 
         }
-        System.out.println("valuestat ok");
+
         return valueStats ;
     }
 
@@ -78,7 +78,7 @@ class CharType {
         this.selectStats();
 
 
-        return valueStats; // ValueStats retourne bien la classe souhait�e mtn
+        return valueStats;
     }
 
 

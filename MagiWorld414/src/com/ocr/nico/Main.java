@@ -8,8 +8,10 @@ public class Main {
 
         CharType n = new CharType();
         Char p1 = n.runChar();
+        p1.setPlayer(1);
         CharType m = new CharType();
         Char p2 = m.runChar();
+        p2.setPlayer(2);
         new Fight(p1,p2);
 
 

@@ -12,13 +12,13 @@ public class  Rodeur extends Char {
             ennemi.vit -= bowAtk;
             System.out.println("Le joueur"+ennemi.player+" perd "+bowAtk+" point de vie");
             if (ennemi.vit<=0)
-                System.out.println("Joueur " + ennemi.player + " est mort.");
+                System.out.println("Joueur "+ennemi.player+" est mort.");
         }
 
         @Override
-        public void specialAtk() {
+        public void specialAtk(Char ennemi) {
 
-            System.out.println("Joueur"+this.player+"utilise Concentration et augmente son agilité.");
+            System.out.println("Joueur "+this.player+" utilise Concentration et augmente son agilité.");
             setAgi(this.agi=agi+(this.lvl/2));
     }
     }

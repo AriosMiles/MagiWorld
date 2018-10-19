@@ -8,10 +8,9 @@ class Fight {
 
 
     Fight(Char p1, Char p2) {
-        System.out.println("Joueur 1 (" + p1.vit + "point de vie).");
-        System.out.println("Joueur 2 (" + p2.vit + "point de vie).");
+        System.out.println("Que le combat commence !");
 
-        while (p1.vit > 0 || p2.vit > 0) {
+        while (p1.vit >= 0 || p2.vit >= 0) {
 
             System.out.println("Joueur 1 (" + p1.vit + "point de vie)." + "Veuillez choisir votre action (1:Attaque Basique, 2:Attaque Spécial)");
             Scanner sc = new Scanner(System.in);
@@ -28,7 +27,8 @@ class Fight {
             else p1.specialAtk(p2);
 
             if (p2.vit <= 0) {
-                System.out.println("Joueur 2 a perdu !");}
+                System.out.println("Joueur 2 a perdu !");
+            break;}
 
 
 
@@ -50,9 +50,11 @@ class Fight {
 
                 if (p1.vit <= 0) {
                     System.out.println("Joueur 1 a perdu !");
+                    break;
 
 
                 }
+
             }
         }
     }

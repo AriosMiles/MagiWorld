@@ -4,15 +4,13 @@ package com.ocr.nico;
 
 public  class Char  {
 
-
-
-
     int player;
     int lvl ;
     int vit = lvl * 5 ;
     int str;
     int agi ;
     int intelligence;
+
 
     public int getPlayer() {
         return player;
@@ -73,8 +71,4 @@ public  class Char  {
 
     }
 
-
-    public void specialAtk() {
-
-    }
 }
