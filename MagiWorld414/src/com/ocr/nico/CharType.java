@@ -34,7 +34,7 @@ class CharType {
        }
 
 
-      public void selectStats (){
+      public Char selectStats (){
 
           Scanner sc = new Scanner(System.in);
           boolean flag = false;
@@ -56,6 +56,11 @@ class CharType {
               p4 = sc.nextInt();
               valueStats.setIntelligence(p4);
 
+              valueStats.vit = 5*valueStats.lvl;
+
+
+
+
 
               if (valueStats.lvl==valueStats.str+valueStats.agi+valueStats.intelligence)
                   flag = true;
@@ -64,13 +69,13 @@ class CharType {
 
           }
 
-
+          return valueStats;
       }
 
      Char runChar() {
          this.chooseClass();
          this.selectStats();
-         return valueStats ;
+         return valueStats;
      }
 
 
