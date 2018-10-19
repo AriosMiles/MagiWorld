@@ -12,22 +12,32 @@ class Fight {
         System.out.println("Joueur 2 (" + p2.vit + "point de vie).");
 
         while (p1.vit > 0 || p2.vit > 0) {
+
             System.out.println("Joueur 1 (" + p1.vit + "point de vie)." + "Veuillez choisir votre action (1:Attaque Basique, 2:Attaque Spécial)");
             Scanner sc = new Scanner(System.in);
             int atkp1 = sc.nextInt();
 
             if (atkp1 < 1 || atkp1 > 2) {
                 System.out.println("Cette attaque n'existe pas");
-            } else if (atkp1 == 1) {
+            }
+
+            else if (atkp1 == 1) {
                 p1.basicAtk(p2);
-            } else p1.specialAtk(p2);
+            }
+
+            else p1.specialAtk(p2);
 
             if (p2.vit <= 0) {
-                System.out.println("Joueur 2 a perdu !");
+                System.out.println("Joueur 2 a perdu !");}
+
+
+
 
                 System.out.println("Au tour du joueur 2.");
 
                 System.out.println("Joueur 2 (" + p2.vit + "point de vie)." + "Veuillez choisir votre action (1:Attaque Basique, 2:Attaque Spécial)");
+
+
 
 
                 int atkp2 = sc.nextInt();
@@ -46,4 +56,4 @@ class Fight {
             }
         }
     }
-}
+

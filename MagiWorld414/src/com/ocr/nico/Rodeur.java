@@ -16,7 +16,7 @@ public class  Rodeur extends Char {
         }
 
         @Override
-        public void specialAtk(Char ennemi) {
+        public void specialAtk() {
 
             System.out.println("Joueur"+this.player+"utilise Concentration et augmente son agilité.");
             setAgi(this.agi=agi+(this.lvl/2));

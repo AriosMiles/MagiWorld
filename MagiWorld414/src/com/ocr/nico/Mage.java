@@ -2,12 +2,7 @@ package com.ocr.nico;
 
 public class Mage extends Char {
 
-
-
-
     Mage () {}
-
-
 
         @Override
         public void basicAtk(Char ennemi) {

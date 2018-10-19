@@ -14,6 +14,14 @@ public  class Char  {
     int agi ;
     int intelligence;
 
+    public int getPlayer() {
+        return player;
+    }
+
+    void setPlayer(int player) {
+        this.player = player;
+    }
+
     public int getLvl() {
         return lvl;
     }
@@ -62,6 +70,11 @@ public  class Char  {
     }
 
     public void specialAtk(Char ennemi) {
+
+    }
+
+
+    public void specialAtk() {
 
     }
 }

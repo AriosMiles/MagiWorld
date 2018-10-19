@@ -1,85 +1,91 @@
 package com.ocr.nico;
-
-
 import java.util.Scanner;
 
 class CharType {
 
-    Char valueStats= new Char();
+    Char valueStats;   // J'ai chang� ici : Je d�finit simplement valueStats
 
     /** Create a new Character
      *
      */
 
-       public Char chooseClass (){
-           System.out.println("Veuillez choisir votre classe : 1-Guerrier, 2-Mage, 3-Rôdeur");
+    public Char chooseClass (){
+        System.out.println("Veuillez choisir votre classe : 1-Guerrier, 2-Mage, 3-Rôdeur");
 
-           Scanner sc = new Scanner(System.in);
-       int val = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int val = sc.nextInt();
 
-       if (val==1) {
-           System.out.println("Vous avez choisis Guerrier!");
-           return new Guerrier();}
+        if (val==1) {
+            System.out.println("Vous avez choisis Guerrier!");
+            return valueStats= new Guerrier();} // Ensuite je donne a valueStats la classe d�sir�e : avant tu la cr�ait dans le vide
 
-       else if (val==2){
-           System.out.println("Vous avez choisis Mage!");
+        else if (val==2){
+            System.out.println("Vous avez choisis Mage!");
 
-           return new Mage();}
+            return valueStats= new Mage();}
 
-       else if (val==3){
-           System.out.println("Vous avez choisis Rôdeur!");
-           return  new Rodeur();}
+        else if (val==3){
+            System.out.println("Vous avez choisis Rôdeur!");
+            return  valueStats= new Rodeur();}
 
-       else return null;
-       }
+        else {
+            return valueStats= new Char();
+
+        }
+    }
 
 
-      public Char selectStats (){
+    public Char selectStats (){
 
-          Scanner sc = new Scanner(System.in);
-          boolean flag = false;
-          while (!flag) {
+        Scanner sc = new Scanner(System.in);
+        boolean flag = false;
+        while (!flag) {
 
 /** @p4 = determine les valeurs des stats
  * @valueStats = valeur enregistré pour le personnage
  * */
-              System.out.println("Veuillez choisir votre niveau (1-100)");
-              int p4 = sc.nextInt();
-              valueStats.setLvl(p4);
-              System.out.println("Votre force?");
-              p4 = sc.nextInt();
-              valueStats.setStr(p4);
-              System.out.println("Votre agilité?");
-              p4 = sc.nextInt();
-              valueStats.setAgi(p4);
-              System.out.println("Votre intelligence?");
-              p4 = sc.nextInt();
-              valueStats.setIntelligence(p4);
+            System.out.println("Veuillez choisir votre niveau (1-100)");
+            int p4 = sc.nextInt();
+            valueStats.setLvl(p4);
+            System.out.println("Votre force?");
+            p4 = sc.nextInt();
+            valueStats.setStr(p4);
+            System.out.println("Votre agilité?");
+            p4 = sc.nextInt();
+            valueStats.setAgi(p4);
+            System.out.println("Votre intelligence?");
+            p4 = sc.nextInt();
+            valueStats.setIntelligence(p4);
 
-              valueStats.vit = 5*valueStats.lvl;
-
-
+            valueStats.vit = 5*valueStats.lvl;
 
 
 
-              if (valueStats.lvl==valueStats.str+valueStats.agi+valueStats.intelligence)
-                  flag = true;
+
+
+            if (valueStats.lvl==valueStats.str+valueStats.agi+valueStats.intelligence) {
+                flag = true;}
 
 
 
-          }
-
-          return valueStats;
-      }
-
-     Char runChar() {
-         this.chooseClass();
-         this.selectStats();
-         return valueStats;
-     }
-
-
+        }
+        System.out.println("valuestat ok");
+        return valueStats ;
     }
+
+    public Char runChar() {
+        this.chooseClass();
+        this.selectStats();
+
+
+        return valueStats; // ValueStats retourne bien la classe souhait�e mtn
+    }
+
+
+}
+
+
+
 
 
 
