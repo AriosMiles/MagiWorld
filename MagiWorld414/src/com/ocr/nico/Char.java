@@ -2,15 +2,16 @@ package com.ocr.nico;
 
 
 
-public  class Char  {
+abstract  class Char  {
 
-    int player;
-    int lvl ;
-    int vit = lvl * 5 ;
-    int str;
-    int agi ;
-    int intelligence;
+    protected int player;
+    protected int lvl ;
+    protected int vit ;
+    protected int str;
+    protected int agi ;
+    protected int intelligence;
 
+    Char (){}
 
     public int getPlayer() {
         return player;
@@ -61,14 +62,12 @@ public  class Char  {
     }
 
 
-    Char (){}
 
-    public void basicAtk(Char ennemi) {
 
-    }
+     public abstract void basicAtk(Char ennemi);
 
-    public void specialAtk(Char ennemi) {
 
-    }
+
+     public abstract void specialAtk(Char ennemi);
 
 }

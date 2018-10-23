@@ -12,7 +12,9 @@ public class Main {
         CharType m = new CharType();
         Char p2 = m.runChar();
         p2.setPlayer(2);
-        new Fight(p1,p2);
+        Fight init = new Fight(p1,p2);
+        init.startFight();
+
 
 
     }
